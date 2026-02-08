@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Учебники — Музей Михаила Воротынского{% endblock %}
+
+{% block content %}
+<article class="article">
+  <div class="breadcrumb"><a href="{{ url_for('index') }}">Главная</a> / Учебники</div>
+
+  <h1 class="h1">В учебниках и популярной литературе</h1>
+  <p class="lead">
+    Примеры изображений, которые можно использовать как иллюстрации к теме:
+    эпоха Ивана IV, битва при Молодях и роль воевод.
+  </p>
+
+  <p class="p">
+    В школьных и вузовских курсах история XVI века обычно рассматривается через несколько больших тем:
+    завершение присоединения Поволжья (Казань и Астрахань), внешняя политика, устройство войска,
+    а также крымские набеги. Воротынский чаще всего упоминается в связи с обороной южных рубежей
+    и сражением при Молодях — как пример воеводы, который совмещал полевое командование и организацию службы.
+  </p>
+
+  <h2 class="h2" id="gallery">Галерея</h2>
+  <div class="gallery">
+    <figure class="imgcard">
+      <img src="https://avatars.mds.yandex.net/i?id=ff267825cd3123d3a90b259edce1f6de_l-5275490-images-thumbs&n=13" alt="Учебник/иллюстрация (1)" loading="lazy" />
+    </figure>
+    <figure class="imgcard">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Ivan_IV_1572.jpg/1061px-Ivan_IV_1572.jpg" alt="Учебник/иллюстрация (2)" loading="lazy" />
+    </figure>
+    <figure class="imgcard">
+      <img src="https://i.pinimg.com/736x/92/fe/7b/92fe7b756949b793a47a637769de446f.jpg" alt="Учебник/иллюстрация (3)" loading="lazy" />
+    </figure>
+  </div>
+</article>
+{% endblock %}

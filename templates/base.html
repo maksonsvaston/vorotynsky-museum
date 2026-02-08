@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Музей Михаила Воротынского{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+  <header class="sitehead">
+    <div class="container sitehead__inner">
+      <a class="sitehead__brand" href="{{ url_for('index') }}">
+        <span class="sitehead__name">
+          <span class="sitehead__title">Музей Михаила Воротынского</span>
+          <span class="sitehead__subtitle">Виртуальная экспозиция • учебный проект</span>
+        </span>
+      </a>
+
+      <div class="sitehead__meta" aria-label="Теги проекта">
+        <span class="chip">XVI век</span>
+        <span class="chip chip--soft">История России</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page">
+    <aside class="sidebar" aria-label="Навигация по разделам">
+      <div class="sideblock">
+        <div class="sideblock__title">Разделы</div>
+        <ul class="sidelist">
+          <li><a href="{{ url_for('index') }}">О проекте</a></li>
+          <li><a href="{{ url_for('biography') }}">Биография</a></li>
+          <li><a href="{{ url_for('monuments') }}">Памятники</a></li>
+          <li><a href="{{ url_for('textbooks') }}">Учебники</a></li>
+          <li><a href="{{ url_for('maps') }}">Карты</a></li>
+        </ul>
+      </div>
+
+      <div class="sideblock sideblock--note">
+        <div class="sideblock__title">Подсказка</div>
+        <div class="sideblock__text">
+          Пользуйтесь меню разделов слева. Внутри страниц — короткие статьи и галерея изображений.
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© Виртуальный музей Михаила Воротынского</div>
+      <div class="muted">Оформление по методическим требованиям</div>
+    </div>
+  </footer>
+
+</body>
+</html>

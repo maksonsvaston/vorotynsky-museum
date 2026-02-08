@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Памятники — Музей Михаила Воротынского{% endblock %}
+
+{% block content %}
+<article class="article">
+  <div class="breadcrumb"><a href="{{ url_for('index') }}">Главная</a> / Памятники</div>
+
+  <h1 class="h1">Памятники Михаилу Воротынскому</h1>
+  <p class="lead">
+    Подборка фотографий памятников и мемориальных объектов, связанных с образом
+    Михаила Воротынского и событиями XVI века.
+  </p>
+
+  <p class="p">
+    Историческая память о воеводах XVI века поддерживается по‑разному: через памятники,
+    мемориальные таблички, музейные экспозиции и локальные краеведческие проекты.
+    Виртуальный музей удобен тем, что позволяет собрать в одном месте изображения и краткие сведения
+    — даже если сами объекты находятся в разных регионах.
+  </p>
+
+  <h2 class="h2" id="gallery">Галерея</h2>
+  <div class="gallery">
+    <figure class="imgcard">
+      <img src="https://avatars.mds.yandex.net/i?id=a3eadca0c27b6ea5677fb70e93796727_l-4229717-images-thumbs&n=13" alt="Памятник Михаилу Воротынскому (фото 1)" loading="lazy" />
+    </figure>
+    <figure class="imgcard">
+      <img src="https://www.kp40.ru/thumbnails/7260/1200x0.webp" alt="Памятник Михаилу Воротынскому (фото 2)" loading="lazy" />
+    </figure>
+    <figure class="imgcard">
+      <img src="http://photos.wikimapia.org/p/00/05/36/56/21_full.jpg" alt="Памятник Михаилу Воротынскому (фото 3)" loading="lazy" />
+    </figure>
+  </div>
+</article>
+{% endblock %}
